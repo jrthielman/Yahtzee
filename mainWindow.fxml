@@ -1,0 +1,106 @@
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.CheckBox?>
+<BorderPane fx:controller="sample.Controller"
+            xmlns:fx="http://javafx.com/fxml" stylesheets="@styling.css" >
+
+    <center>
+        <HBox alignment="CENTER" style="-fx-padding: 10;">
+            <VBox alignment="CENTER">
+                <HBox style="-fx-padding: 5px;">
+                    <Button fx:id="acesKnop"/>
+                    <TextField editable="false" maxWidth="30" fx:id="aces"/>
+                    <Label text="Aces" style="-fx-padding: 5px;"/>
+                </HBox>
+                <HBox style="-fx-padding: 5px;">
+                    <Button fx:id="twoKnop"/>
+                    <TextField editable="false" maxWidth="30" fx:id="two" />
+                    <Label text="Two" style="-fx-padding: 5px;"/>
+                </HBox>
+                <HBox style="-fx-padding: 5px;">
+                    <Button fx:id="threeKnop"/>
+                    <TextField editable="false" maxWidth="30" fx:id="three"/>
+                    <Label text="Three" style="-fx-padding: 5px;"/>
+                </HBox>
+                <HBox style="-fx-padding: 5px;">
+                    <Button fx:id="fourKnop"/>
+                    <TextField editable="false" maxWidth="30" fx:id="four"/>
+                    <Label text="Four" style="-fx-padding: 5px;"/>
+                </HBox>
+                <HBox style="-fx-padding: 5px;">
+                    <Button fx:id="fiveKnop"/>
+                    <TextField editable="false" maxWidth="30" fx:id="five"/>
+                    <Label text="Five" style="-fx-padding: 5px;" />
+                </HBox>
+                <HBox style="-fx-padding: 5px;">
+                    <Button fx:id="sixKnop"/>
+                    <TextField editable="false" maxWidth="30" fx:id="six"/>
+                    <Label text="Six" style="-fx-padding: 5px;" />
+                </HBox>
+            </VBox>
+            <VBox alignment="CENTER">
+                <HBox style="-fx-padding: 5px;">
+                    <Button fx:id="onePairKnop"/>
+                    <TextField editable="false" maxWidth="30" fx:id="onePair"/>
+                    <Label text="1 pair" style="-fx-padding: 5px;"/>
+                </HBox>
+                <HBox style="-fx-padding: 5px;">
+                    <Button fx:id="twoPairKnop"/>
+                    <TextField editable="false" maxWidth="30" fx:id="twoPair"/>
+                    <Label text="2 pair" style="-fx-padding: 5px;"/>
+                </HBox>
+                <HBox>
+                    <Label text="Totaal: "/>
+                    <TextField editable="false" fx:id="totaalWaarde" maxWidth="50"/>
+                </HBox>
+            </VBox>
+
+        </HBox>
+    </center>
+
+    <left>
+        <GridPane>
+            <Label fx:id="username" style="-fx-font-weight: bold; -fx-font-size: 15;" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2"/>
+            <VBox style="-fx-padding:10px;" GridPane.rowIndex="1" GridPane.columnIndex="0">
+                <ImageView fx:id="dobbelSteen"/>
+                <ImageView fx:id="dobbelSteen2"/>
+                <ImageView fx:id="dobbelSteen3"/>
+            </VBox>
+            <VBox style="-fx-padding:10 10 0 0;" GridPane.rowIndex="1" GridPane.columnIndex="1">
+                <ImageView fx:id="dobbelSteen4"/>
+                <ImageView fx:id="dobbelSteen5"/>
+            </VBox>
+            <VBox style="-fx-padding:0 10 0 10;" GridPane.rowIndex="2" GridPane.columnIndex="0" GridPane.columnSpan="2">
+                <Button text="release dobbelstenen" onAction="#reset"/>
+                <Button text="reset spelkaart" onAction="#resetKaart"/>
+            </VBox>
+        </GridPane>
+    </left>
+    <right>
+    </right>
+
+    <bottom>
+        <GridPane id="box-holder" alignment="CENTER" maxHeight="10">
+            <Label text="Welke dobbelstenen wil je vasthouden" id="instructies" GridPane.columnIndex="0"
+                   GridPane.rowIndex="0"/>
+            <TextField promptText="dobbelsteen nummer" GridPane.rowIndex="1"
+                       GridPane.columnIndex="0" id="input-field"
+                       GridPane.hgrow="ALWAYS" prefWidth="300" fx:id="userInput"/>
+            <Button text="werp dobbelstenen" fx:id="werpButton" id="click-me" GridPane.rowIndex="1"
+                    GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" prefWidth="200"/>
+        </GridPane>
+    </bottom>
+
+
+
+
+</BorderPane>

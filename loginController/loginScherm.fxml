@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<DialogPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sample.loginController.LoginController">
+
+    <headerText>
+        Login
+    </headerText>
+
+    <content>
+        <VBox alignment="CENTER">
+            <Label fx:id="waarschuwing" style="-fx-text-fill: red;"/>
+            <TextField fx:id="username" promptText="Username"/>
+        </VBox>
+    </content>
+
+</DialogPane>
