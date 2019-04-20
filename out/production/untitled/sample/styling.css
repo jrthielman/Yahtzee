@@ -1,0 +1,17 @@
+#click-me{
+
+    /*-fx-border-color: black;
+    -fx-border-width: 2;*/
+
+}
+
+#instructies{
+
+    -fx-padding: 5px;
+    -fx-font-weight: bold;
+}
+
+BorderPane{
+    -fx-padding: 0 20 20 20;
+
+}
